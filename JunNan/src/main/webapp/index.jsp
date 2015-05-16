@@ -6,11 +6,14 @@
 <meta name="keywords" content="杭州君南科技有限公司|宗教|电力">
 <meta name="generator" content="MetInfo 5.2.2">
 <link href="http://www.metinfo.cn/demo/trade026/329/favicon.ico" rel="shortcut icon">
-<link rel="stylesheet" type="text/css" href="./assets/css/metinfo_ui.css" id="metuimodule">
+<link rel="stylesheet" type="text/css" href="./assets/css/metinfo_ui.css" id="metuimodule" data-module="10001">
 <link rel="stylesheet" type="text/css" href="./assets/css/metinfo.css">
 <script src="./assets/js/jQuery1.7.2.js" type="text/javascript"></script>
 <script src="./assets/js/metinfo_ui.js" type="text/javascript"></script>
 <script src="./assets/js/ch.js" type="text/javascript"></script>
+<!--[if IE]>
+<script src="public/js/html5.js" type="text/javascript"></script>
+<![endif]-->
 <link rel="stylesheet" type="text/css" id="onlinecss" href="./assets/css/metinfo(1).css"></head>
 
 <body style="height: 100%;">
@@ -44,61 +47,34 @@
 	<div class="inner met_flash">
 <link href="./assets/css/css.css" rel="stylesheet" type="text/css">
 <script src="./assets/js/jquery.bxSlider.min.js" type="text/javascript"></script>
-<div class="flash flash6" style="width:980px; height:297px;">
+<div class="flash flash6" style="width:980px; height:306px;">
 <div class="bx-wrapper" style="width:980px; position:relative;"><div class="bx-window" style="width:980px; height:306px; position:relative; overflow:hidden;">
-<ul id="slider6" class="list-none" style="height: 999999px; position: relative; top: -306px;">
-<li style="list-style: none; height: 306px;"><a href="" target="_blank" title="">
-<img src="./assets/img/1393500857.jpg" alt="" width="980" height="297"></a></li>
+<ul id="slider6" class="list-none" style="height: 999999px; position: relative; ">
 <li class="pager" style="list-style: none; height: 306px;">
-<img src="./assets/img/1393499756.jpg" alt="" width="980" height="297"></li>
+<img src="./assets/img/1393499756.jpg" alt="" width="980" height="306"></li>
 <li class="pager" style="list-style: none; height: 306px;">
-<img src="./assets/img/1393500564.jpg" alt="" width="980" height="297"></li>
+<img src="./assets/img/1393500564.jpg" alt="" width="980" height="306"></li>
 <li class="pager" style="list-style: none; height: 306px;">
-<img src="./assets/img/1393500857.jpg" alt="" width="980" height="297"></li>
-<li style="list-style: none; height: 306px;"><a href="" target="_blank" title="">
-<img src="./assets/img/1393499756.jpg" alt="" width="980" height="297"></a></li>
+<img src="./assets/img/1393500857.jpg" alt="" width="980" height="306"></li>
+
 </ul></div>
-<!-- <div class="bx-pager"><a href="" class="pager-link pager-1 pager-active">1</a><a href="" class="pager-link pager-2">2</a><a href="" class="pager-link pager-3">3</a></div> -->
+
 </div>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){ 
 	$('#slider6').bxSlider({ 
 		mode:'vertical',
+		autoHover:true,
 		auto:true,
+		pager: true,
 		pause: 5000,
-		controls:false
+		controls:true
+		});
 	});
-});
 </script></div>
 
 
-<div class="indexpic">
-				<div class="hpanel">
-						<div class="l">软件产品</div>
-						<div class="m"><a href="http://www.metinfo.cn/demo/trade026/329/product/" class="more" title="链接关键词">更多&gt;&gt;</a></div>
-				</div>	<div class="clear"></div>
-				<div class="index-product">
-						<div>
-								<p id="trigger" style="display: none;"><a href="javascript:void(0);" target="_self" class="">1</a><a href="javascript:void(0);" target="_self" class="">2</a><a href="javascript:void(0);" target="_self" class="">3</a><a href="javascript:void(0);" target="_self" class="">4</a><a href="javascript:void(0);" target="_self" class="current">5</a><a href="javascript:void(0);" target="_self" class="">6</a><a href="javascript:void(0);" target="_self" class="">7</a><a href="javascript:void(0);" target="_self" class="">8</a></p>
-								<a class="prev" id="car_prev" href="javascript:void(0);" style="margin-top: 7%;"></a> <a class="next" id="car_next" href="javascript:void(0);" style="margin-top: 7%;"></a> </div>
-						<div class="clear">
-								<div class="profld" id="indexcar" data-listnum="4" style="height: 192px;">
-								<ol class="list-none metlist" style="height: 192px; left: -658.5px;">
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative; left: 0px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product5.html" title="外贸管理系统" target="_self" class="img"><img src="./assets/img/1393658995.jpg" alt="外贸管理系统" title="外贸管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product5.html" title="外贸管理系统" target="_self">外贸管理系统</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product6.html" title="CRM系统 " target="_self" class="img"><img src="./assets/img/1393659465.jpg" alt="CRM系统 " title="CRM系统 " width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product6.html" title="CRM系统 " target="_self">CRM系统 </a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product7.html" title="进销存管理系统" target="_self" class="img"><img src="./assets/img/1393660998.jpg" alt="进销存管理系统" title="进销存管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product7.html" title="进销存管理系统" target="_self">进销存管理系统</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product8.html" title="ERP管理软件" target="_self" class="img"><img src="./assets/img/1393661166.png" alt="ERP管理软件" title="ERP管理软件" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product8.html" title="ERP管理软件" target="_self">ERP管理软件</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product9.html" title="仓库管理系统" target="_self" class="img"><img src="./assets/img/1393661500.png" alt="仓库管理系统" title="仓库管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product9.html" title="仓库管理系统" target="_self">仓库管理系统</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product10.html" title="生物工程系统" target="_self" class="img"><img src="./assets/img/1393662252.png" alt="生物工程系统" title="生物工程系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product10.html" title="生物工程系统" target="_self">生物工程系统</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product11.html" title="OA管理系统" target="_self" class="img"><img src="./assets/img/1393662598.png" alt="OA管理系统" title="OA管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product11.html" title="OA管理系统" target="_self">OA管理系统</a></h3></li>
-								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product12.html" title="客户管理系统" target="_self" class="img"><img src="./assets/img/1393662822.png" alt="客户管理系统" title="客户管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product12.html" title="客户管理系统" target="_self">客户管理系统</a></h3></li>
-						
-								</ol></div>
-						</div>
-				</div>
-				<div class="clear"></div>
-				</div>
 
 			
 <script>
@@ -148,6 +124,33 @@ $('#trigger').hide();
 				</div>
 				<div class="clear"></div>
 				<div class="content-bottom inner"></div>
+				
+<div class="indexpic">
+				<div class="hpanel">
+						<div class="l">软件产品</div>
+						<div class="m"><a href="http://www.metinfo.cn/demo/trade026/329/product/" class="more" title="链接关键词">更多&gt;&gt;</a></div>
+				</div>	<div class="clear"></div>
+				<div class="index-product">
+						<div>
+								<p id="trigger" style="display: none;"><a href="javascript:void(0);" target="_self" class="">1</a><a href="javascript:void(0);" target="_self" class="">2</a><a href="javascript:void(0);" target="_self" class="">3</a><a href="javascript:void(0);" target="_self" class="">4</a><a href="javascript:void(0);" target="_self" class="current">5</a><a href="javascript:void(0);" target="_self" class="">6</a><a href="javascript:void(0);" target="_self" class="">7</a><a href="javascript:void(0);" target="_self" class="">8</a></p>
+								<a class="prev" id="car_prev" href="javascript:void(0);" style="margin-top: 7%;"></a> <a class="next" id="car_next" href="javascript:void(0);" style="margin-top: 7%;"></a> </div>
+						<div class="clear">
+								<div class="profld" id="indexcar" data-listnum="4" style="height: 192px;">
+								<ol class="list-none metlist" style="height: 192px; left: -658.5px;">
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative; left: 0px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product5.html" title="外贸管理系统" target="_self" class="img"><img src="./assets/img/1393658995.jpg" alt="外贸管理系统" title="外贸管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product5.html" title="外贸管理系统" target="_self">外贸管理系统</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product6.html" title="CRM系统 " target="_self" class="img"><img src="./assets/img/1393659465.jpg" alt="CRM系统 " title="CRM系统 " width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product6.html" title="CRM系统 " target="_self">CRM系统 </a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product7.html" title="进销存管理系统" target="_self" class="img"><img src="./assets/img/1393660998.jpg" alt="进销存管理系统" title="进销存管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product7.html" title="进销存管理系统" target="_self">进销存管理系统</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product8.html" title="ERP管理软件" target="_self" class="img"><img src="./assets/img/1393661166.png" alt="ERP管理软件" title="ERP管理软件" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product8.html" title="ERP管理软件" target="_self">ERP管理软件</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product9.html" title="仓库管理系统" target="_self" class="img"><img src="./assets/img/1393661500.png" alt="仓库管理系统" title="仓库管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product9.html" title="仓库管理系统" target="_self">仓库管理系统</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product10.html" title="生物工程系统" target="_self" class="img"><img src="./assets/img/1393662252.png" alt="生物工程系统" title="生物工程系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product10.html" title="生物工程系统" target="_self">生物工程系统</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product11.html" title="OA管理系统" target="_self" class="img"><img src="./assets/img/1393662598.png" alt="OA管理系统" title="OA管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product11.html" title="OA管理系统" target="_self">OA管理系统</a></h3></li>
+								<li class="list" style="height: 192px; margin: 0px 26.75px; position: relative;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product12.html" title="客户管理系统" target="_self" class="img"><img src="./assets/img/1393662822.png" alt="客户管理系统" title="客户管理系统" width="160" height="160"></a><h3 style="width: 160px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/product12.html" title="客户管理系统" target="_self">客户管理系统</a></h3></li>
+						
+								</ol></div>
+						</div>
+				</div>
+				<div class="clear"></div>
+				</div>
 				</div>
 
 				<div class="index-link linkx inner">

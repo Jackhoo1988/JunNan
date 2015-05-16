@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	 xmlns:tx="http://www.springframework.org/schema/tx" 
+	 xmlns:aop="http://www.springframework.org/schema/aop" 
+	 xmlns:context="http://www.springframework.org/schema/context"
+	 xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd" >
+	
+	<!-- 引入配置数据源时所需要的变量的外部文件，对后期更换数据库或修改驱动的连接等提供便捷的维护 -->
+	<bean id="propertyConfigurer"  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">   
+        <property name="location" value="classpath:database.properties"/>   
+    </bean>
+    <!-- 自动扫描Bean -->
+    <context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.JunNan"></context:component-scan>
+    
+
+
+<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+       <!-- 指定连接数据库的驱动 -->
+		<property name="driverClass" value="${mysqljdbc.driverClassName}"></property>  
+		  <!-- 指定连接数据库的URL -->
+        <property name="jdbcUrl" value="${mysqljdbc.url}"></property>  
+         <!-- 指定连接数据库的用户名 -->
+        <property name="user"><value>${mysqljdbc.username}</value></property> 
+        <!-- 指定连接数据库的密码 -->
+        <property name="password"><value>${mysqljdbc.password}</value></property>
+       
+		<!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+        <!-- 每次都验证连接是否可用 --> 
+         <!-- 最小连接数 --> 
+        <property name="minPoolSize"><value>1</value></property> 
+        <!-- 最大连接数 --> 
+      	<property name="maxPoolSize"><value>10</value></property> 
+      	<!-- 初始化的连接个数要在最大最小之间-->
+      	<property name="initialPoolSize"><value>2</value></property> 
+      	<!-- 指定连接数据库连接池的连接的最大空闲时间 -->
+      	<!-- 这儿设置成每隔1800秒就扫描一次，检查一下空闲的链接。所以，用户基本上不会得到空闲的链接了 -->
+      	<!-- 最大空闲时间,1800秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0  -->
+      	<property name="maxIdleTime"><value>20</value></property> 
+      	<!-- 每隔 1800秒后会被重新计时-->
+      	<property name="idleConnectionTestPeriod"><value>20</value></property> 
+      	<!--如果下面设置成true那么 每次连接之前，都要测一下。但是这样会影响效率。如果上面的每隔1800检查还不放心那么就启用这个 -->
+      	<property name="testConnectionOnCheckout"><value>false</value></property> 
+      	<!--当池中的连接耗尽的时候，一次性增加的连接数量,默认为2-->
+      	<property name="acquireIncrement"><value>2</value></property> 
+      	<!--statemnets缓存大小 0缓存关闭--> 
+      	<property name="maxStatements"><value>0</value></property>
+      	 <!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 --> 
+      	<property name="acquireRetryAttempts"><value>30</value></property> 
+      	<!--获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效 
+　　保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试 
+　　获取连接失败后该数据源将申明已断开并永久关闭。Default: false--> 
+      	
+      	<property name="breakAfterAcquireFailure"><value>true</value></property> 
+    </bean>
+
+	<!-- TransactionManager mysql-->
+	<bean id="transactionManagermysql"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+
+	<!-- mybatis文件 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 自动扫描entity目录，省略Configuration.xml里手工配置 -->
+		<property name="mapperLocations" value="classpath:com/JunNan/mapper/*.xml" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.JunNan.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean> 
+
+	<!-- 配置事务管理器 -->
+	<bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 注解方式配置事物 -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+
+	<!-- 拦截器方式配置事物 -->
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="append*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="modify*" propagation="REQUIRED" />
+			<tx:method name="edit*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="repair" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="search*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="datagrid*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.JunNan.service..*Impl.*(..))" />
+		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
+	</aop:config>
+
+</beans>

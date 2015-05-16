@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.objectFactory" value="spring" />
+<constant name="struts.devMode" value="false" />
+<constant name="struts.i18n.encoding" value="utf-8" />
+<constant name="struts.i18n.reload" value="true" />
+<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->
+    <constant name="struts.multipart.maxSize" value="10485760"/>
+    <!-- 设置上传文件的临时文件夹,默认使用javax.servlet.context.tempdir -->
+    <constant name="struts.multipart.saveDir " value="/ueditor/temp/" />
+<constant name="struts.configuration.xml.reload" value="true" />
+<package name="strutsBase" extends="struts-default" abstract="true"/>
+    <package name="jsonBase" extends="json-default" abstract="true">
+        <default-interceptor-ref name="mainStack" />
+        <global-results>
+            <result name="jsonErr" type="redirect">
+                /permission/noPermission
+            </result>
+            <result name="toIndex">/index.jsp</result>
+        </global-results>
+    </package>
+</struts>
