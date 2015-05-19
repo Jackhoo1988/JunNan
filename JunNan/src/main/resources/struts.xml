@@ -16,13 +16,13 @@
     <constant name="struts.multipart.saveDir " value="/ueditor/temp/" />
 <constant name="struts.configuration.xml.reload" value="true" />
 <package name="strutsBase" extends="struts-default" abstract="true"/>
-    <package name="jsonBase" extends="json-default" abstract="true">
-        <default-interceptor-ref name="mainStack" />
-        <global-results>
-            <result name="jsonErr" type="redirect">
-                /permission/noPermission
-            </result>
-            <result name="toIndex">/index.jsp</result>
-        </global-results>
-    </package>
+
+<package name="index" extends="json-default" namespace="/">
+  <action name="index" class="indexAction" method="initInfo">
+      <result type="json" name="jsobj">
+          <param name="root">jsobj</param>
+      </result>
+  </action>
+</package>
+
 </struts>

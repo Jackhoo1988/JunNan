@@ -30,7 +30,7 @@ public class ModuleServiceImpl implements ModuleService {
 	public JSONObject listModule() {
 		Map<Object,Object> map=new HashMap<>();
 		map.put("data", moduleMapper.listModule());
-		System.out.println("num:" + moduleMapper.listModule().size());
+
 		return JSONObject.fromObject(map);
 	}
 

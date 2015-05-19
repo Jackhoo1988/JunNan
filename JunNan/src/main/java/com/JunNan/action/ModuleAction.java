@@ -19,7 +19,6 @@ public class ModuleAction {
 	
 	public String load(){
 		jsobj =  moduleService.listModule();
-    	System.out.println(jsobj.toString());
     	return "jsobj";
 	}
 }

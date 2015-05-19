@@ -2,23 +2,40 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.JunNan.dao.ModuleMapper" >
   <resultMap id="BaseResultMap" type="com.JunNan.model.Module" >
-    <id column="ID" property="ID" jdbcType="BIGINT" />
-    <result column="Name" property="name" jdbcType="VARCHAR" />
-    <result column="Url" property="Url" jdbcType="VARCHAR" />
+    <id column="m_id" property="ID" jdbcType="BIGINT" />
+    <result column="m_name" property="name" jdbcType="VARCHAR" />
+    <result column="m_url" property="Url" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="moduleResult" type="com.JunNan.model.Module" >
+    <id column="m_id" property="ID" jdbcType="BIGINT" />
+    <result column="m_name" property="name" jdbcType="VARCHAR" />
+    <result column="m_url" property="Url" jdbcType="VARCHAR" />
+    <collection property="moduleItems" javaType="java.util.ArrayList" ofType="com.JunNan.model.ModuleItem">
+    	<id column="mi_id" property="ID" jdbcType="BIGINT" />
+	    <result column="mi_name" property="name" jdbcType="VARCHAR" />
+	    <result column="mi_url" property="Url" jdbcType="VARCHAR" />
+    </collection>
   </resultMap>
   <sql id="Base_Column_List" >
-    ID, Name, Url
+    m_id, m_name, m_url
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from Module
-    where ID = #{ID,jdbcType=BIGINT}
+    where m_id = #{ID,jdbcType=BIGINT}
   </select>
  
-  <select id="listModule" resultMap="BaseResultMap">
-      select 
-    <include refid="Base_Column_List" />
-    from Module
+<select id="listModule" resultMap="moduleResult">
+      SELECT 
+	      a.mi_id,
+	      a.mi_name,
+	      a.mi_url,
+		  b.m_name,
+		  b.m_id,
+		  b.m_url
+	 FROM moduleItem a
+	RIGHT OUTER JOIN module b
+	   ON a.mi_moduleID = b.m_id
   </select>
 </mapper>

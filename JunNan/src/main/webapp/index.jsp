@@ -14,7 +14,23 @@
 <!--[if IE]>
 <script src="public/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" id="onlinecss" href="./assets/css/metinfo(1).css"></head>
+<link rel="stylesheet" type="text/css" id="onlinecss" href="./assets/css/metinfo(1).css">
+
+<script type="text/javascript">
+$(function () {
+	$.ajax({
+		url: "index.action",     
+        type: "POST",  
+        success: function(result){
+        	 alert(JSON.stringify(result.data));
+        },
+        error: function (msg) {
+            alert(JSON.stringify(msg));
+        }
+	});
+});
+</script>
+</head>
 
 <body style="height: 100%;">
 <header>
@@ -28,7 +44,8 @@
 		<nav><div class="inner">
 		<ul class="list-none">
 		<li id="nav_10001" style="width:120px;"><a href="" title="首页" class="nav"><span>首页</span></a></li>
-		<li class="line"></li><li id="nav_29" style="width:120px;">
+		<li class="line"></li>
+		<li id="nav_29" style="width:120px;">
 			<a href="http://www.metinfo.cn/demo/trade026/329/about/" title="关于我们" class="hover-none nav"><span>关于我们</span></a>
 			<dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;">
 			<dd><a href="http://www.metinfo.cn/demo/trade026/329/about/about30.html" title="公司简介">公司简介</a></dd>
@@ -36,8 +53,9 @@
 			<dd><a href="http://www.metinfo.cn/demo/trade026/329/about/about32.html" title="分支机构">分支机构</a></dd>
 			<dd><a href="http://www.metinfo.cn/demo/trade026/329/about/about33.html" title="合作伙伴">合作伙伴</a></dd>
 			<dd><a href="http://www.metinfo.cn/demo/trade026/329/about/about42.html" title="联系我们">联系我们</a></dd>
-			</dl></li>
-			<li class="line"></li><li id="nav_48" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/" title="软件产品" class="hover-none nav"><span>软件产品</span></a></li><li class="line"></li><li id="nav_2" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/news/" title="新闻资讯" class="hover-none nav"><span>新闻资讯</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/news/news_9_1.html" title="行业信息">行业信息</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/news/news_10_1.html" title="产品新闻">产品新闻</a></dd></dl></li><li class="line"></li><li id="nav_22" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/" title="产品与解决方案" class="hover-none nav"><span>产品与解决方案</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue25.html" title="系统集成">系统集成</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue26.html" title="服务外包">服务外包</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue27.html" title="新产品代理">新产品代理</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/product/" title="软件产品">软件产品</a></dd></dl></li><li class="line"></li><li id="nav_28" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/servise/" title="服务和管理" class="hover-none nav"><span>服务和管理</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise35.html" title="客户服务体系">客户服务体系</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise36.html" title="软件开发流程">软件开发流程</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise37.html" title="系统集成流程">系统集成流程</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise38.html" title="保修服务流程">保修服务流程</a></dd></dl></li><li class="line"></li><li id="nav_34" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/job/" title="招贤纳士" class="hover-none nav"><span>招贤纳士</span></a></li><li class="line"></li><li id="nav_42" style="width:119px;" class=""><a href="http://www.metinfo.cn/demo/trade026/329/about/about42.html" title="联系我们" class="hover-none nav"><span>联系我们</span></a></li></ul></div></nav>
+			</dl>
+		</li>
+		<li class="line"></li><li id="nav_48" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/product/" title="软件产品" class="hover-none nav"><span>软件产品</span></a></li><li class="line"></li><li id="nav_2" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/news/" title="新闻资讯" class="hover-none nav"><span>新闻资讯</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/news/news_9_1.html" title="行业信息">行业信息</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/news/news_10_1.html" title="产品新闻">产品新闻</a></dd></dl></li><li class="line"></li><li id="nav_22" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/" title="产品与解决方案" class="hover-none nav"><span>产品与解决方案</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue25.html" title="系统集成">系统集成</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue26.html" title="服务外包">服务外包</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/projiejue/projiejue27.html" title="新产品代理">新产品代理</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/product/" title="软件产品">软件产品</a></dd></dl></li><li class="line"></li><li id="nav_28" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/servise/" title="服务和管理" class="hover-none nav"><span>服务和管理</span></a><dl class="myCorner" data-corner="bottom 9px" style="border-bottom-left-radius: 9px; border-bottom-right-radius: 9px;"><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise35.html" title="客户服务体系">客户服务体系</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise36.html" title="软件开发流程">软件开发流程</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise37.html" title="系统集成流程">系统集成流程</a></dd><dd><a href="http://www.metinfo.cn/demo/trade026/329/servise/servise38.html" title="保修服务流程">保修服务流程</a></dd></dl></li><li class="line"></li><li id="nav_34" style="width:120px;"><a href="http://www.metinfo.cn/demo/trade026/329/job/" title="招贤纳士" class="hover-none nav"><span>招贤纳士</span></a></li><li class="line"></li><li id="nav_42" style="width:119px;" class=""><a href="http://www.metinfo.cn/demo/trade026/329/about/about42.html" title="联系我们" class="hover-none nav"><span>联系我们</span></a></li></ul></div></nav>
 </header>
 
 

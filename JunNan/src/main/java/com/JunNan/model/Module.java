@@ -1,10 +1,14 @@
 package com.JunNan.model;
 
+import java.util.List;
+
 public class Module {
 
 	private Long ID;
 	private String Name;
 	private String Url;
+	private List<ModuleItem> moduleItems;
+	
 	public Long getID() {
 		return ID;
 	}
@@ -22,6 +26,12 @@ public class Module {
 	}
 	public void setUrl(String url) {
 		Url = url;
+	}
+	public List<ModuleItem> getModuleItems() {
+		return moduleItems;
+	}
+	public void setModuleItems(List<ModuleItem> moduleItems) {
+		this.moduleItems = moduleItems;
 	}
 	
 	
